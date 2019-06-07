@@ -1,0 +1,11 @@
+{
+  "name": "grocery-list-app",
+  "version": "1.0.0",
+  "description": "A grocery list web application that can be shared in real-time by multiple people.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "T.Swift",
+  "license": "ISC"
+}
