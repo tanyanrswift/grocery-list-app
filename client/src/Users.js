@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserForm from './UserForm';
+import UserSignUp from './UserSignUp';
 
 class Users extends Component {
     state = {
@@ -20,7 +20,7 @@ class Users extends Component {
     render(){
         return(
             <section>
-                <UserForm onSubmit={(e) => this.createUser(e)} />
+                <UserSignUp onSubmit={(e) => this.createUser(e)} />
             </section>
         )
     }

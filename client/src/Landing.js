@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import UserSignUp from './UserSignUp';
 
 class Landing extends Component {
     render(){
         return (
             <section>
                 <nav>
-                    <img src={require('./grocery-icon.png')} alt="grocery bag icon" />
-                    <ul>Sign Up</ul>
+                    <Link to='/'><img src={require('./grocery-icon.png')} alt="grocery bag icon" /></Link>
+                    <Link to='./UserSignUp'>Sign Up</Link>
                     <ul>Sign In</ul>
                     <ul>Sign Out</ul>
                 </nav>

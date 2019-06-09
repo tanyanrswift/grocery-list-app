@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function UserForm(props){
+export default function UserSignUp(props){
     return (
         <section>
             <h2>User Sign Up</h2>

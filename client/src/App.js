@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Users from './Users';
+//import Users from './Users';
 import Landing from './Landing';
 
 function App() {
