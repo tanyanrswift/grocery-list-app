@@ -3,13 +3,17 @@ import React, {Component} from 'react';
 class Navigation extends Component {
     render(){
         return(
-            <ul>
-                <li><a href="home" onClick={e => this.props.onSelect('/')}>Home</a></li>
-                <li><a href="items" onClick={e => this.props.onSelect('/items')}>Items</a></li>
-                <li>Sign In</li>
-                <li>Sign Out</li>
-                <li>Sign Up</li>
-            </ul>
+            <div>
+                <header>
+                    <nav>
+                        <a href="#home" onClick={e => this.props.onSelect('/')}>Home</a>
+                        <a href="#items" onClick={e => this.props.onSelect('/items')}>Items</a>
+                        <a href='#signIn' onClick={e => this.props.onSelect('/signIn')}>Sign In</a>
+                        <a href='#signOut' onClick={e => this.props.onSelect('/signOut')}>Sign Out</a>
+                        <a href='#signUp' onClick={e => this.props.onSelect('/signUp')}>Sign Up</a>
+                    </nav>
+                </header>
+            </div>
         )
     }
 }

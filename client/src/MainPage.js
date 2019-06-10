@@ -5,22 +5,22 @@ import Navigation from './Navigation';
 
 class MainPage extends Component {
     state = {
-        current: '/'
+        currentSection: '/'
     }
-    select = (section) => {
-        this.setState({current: section});
+    selectSection = (section) => {
+        this.setState({currentSection: section});
     }
     render(){
         let section;
-        if(this.state.current === '/'){
-            let section = <Landing />
-        } else if(this.state.current === '/items'){
-            let section = <Items />
+        if(this.state.currentSection === '/'){
+            section = <Landing />
+        } else if(this.state.currentSection === '/items'){
+            section = <Items />
         }
         return (
             <div>
-                <Navigation onSelect={this.select} />
-                <p>{section}</p>
+                <Navigation onSelect={this.selectSection} />
+                {section}
             </div>
         )
     }

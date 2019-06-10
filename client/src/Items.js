@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemForm from './ItemForm';
 
 class Items extends Component {
     state = {
@@ -14,9 +15,22 @@ class Items extends Component {
             this.setState({items: data})
         )
     }
+    createItem(e){
+        e.preventDefault();
+        fetch('http://localhost:8000/api/items/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({name: e.target.name.value, purchased: e.target.purchased.value})
+        })
+        .then(res => res.json())
+        .then(newItem => this.setState({items: [...this.state.items,newItem]}));
+    }
     render(){
         return(
             <section>
+                <ItemForm onSubmit={(e) => this.createItem(e)} />
                 <h2>Items</h2>
                 <ul>
                     {this.state.items.map(item =>

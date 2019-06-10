@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={require('./grocery-icon.png')} alt="grocery bag icon" />
+        <img src={require('./grocery-icon.png')} class='grocery-bag-icon' alt="grocery bag icon" />
         <MainPage />
       </header>
     </div>
