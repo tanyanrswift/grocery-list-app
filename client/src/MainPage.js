@@ -1,26 +1,22 @@
 import React, {Component} from 'react';
+import {Route, Link} from 'react-router-dom';
 import Landing from './Landing';
 import Items from './Items';
-import Navigation from './Navigation';
 
 class MainPage extends Component {
-    state = {
-        current: '/'
-    }
-    select = (section) => {
-        this.setState({current: section});
-    }
     render(){
-        let section;
-        if(this.state.current === '/'){
-            let section = <Landing />
-        } else if(this.state.current === '/items'){
-            let section = <Items />
-        }
         return (
             <div>
-                <Navigation onSelect={this.select} />
-                <p>{section}</p>
+                <header>
+                    <nav>
+                        <Link to='/'>Home</Link>
+                        <Link to='./items'>Items</Link>
+                    </nav>
+                </header>
+                <main>
+                    <Route exact path='/' component={Landing} />
+                    <Route exact path='./items' component={Items} />
+                </main>
             </div>
         )
     }
