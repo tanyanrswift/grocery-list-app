@@ -1,0 +1,33 @@
+LANDING PAGE
+Welcome header
+Navigation
+    Sign Up => Sign Up Form
+    Sign In => Sign In Form
+    Sign Out
+
+    View Items
+    Create Item => Create Item Form
+Photo
+
+
+MODELS
+User (username, email, password)
+Item (name, purchased)
+
+ROUTES
+    Users
+        GET => sign up form, sign in form, sign out
+        POST => create user, sign in
+    
+    Items
+        GET => show all, create item form, edit item form
+        POST => create item, update item, delete item
+
+VIEWS
+    Users
+        Sign Up Form
+        Sign In Form
+        Create User Form
+    Items
+        Create Item Form
+        Edit Item Form

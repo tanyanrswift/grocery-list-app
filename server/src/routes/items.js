@@ -3,9 +3,8 @@ const router = express.Router();
 
 const itemController = require("../controllers/itemController");
 
-router.get("/api/items", itemController.showAll);
+router.get("/api/items", itemController.findAll);
 
-router.post("/api/items", itemController.create);
-//router.post("/api/items/update", itemController.update);
+//router.post("/api/items", itemController.create);
 
 module.exports = router;
