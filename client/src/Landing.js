@@ -7,10 +7,12 @@ class Landing extends Component {
         return (
             <section>
                 <nav>
-                    <Link to='/'><img src={require('./grocery-icon.png')} alt="grocery bag icon" /></Link>
-                    <Link to='./UserSignUp'>Sign Up</Link>
-                    <ul>Sign In</ul>
-                    <ul>Sign Out</ul>
+                    <ul>
+                        <img src={require('./grocery-icon.png')} alt="grocery bag icon" />
+                        <li>Sign Up</li>
+                        <li>Sign In</li>
+                        <li>Sign Out</li>
+                    </ul>
                 </nav>
                 <h1>Welcome!</h1>
             </section>

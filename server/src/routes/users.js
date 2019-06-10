@@ -3,7 +3,7 @@ const router = express.Router();
 
 const userController = require("../controllers/userController");
 
-router.get("/api/users/signUp", userController.signUp);
+//router.get("/api/users/signUp", userController.signUp);
 //router.get("/api/users/signIn", userController.signInForm);
 //router.get("/api/users/signOut", userController.signOut);
 
