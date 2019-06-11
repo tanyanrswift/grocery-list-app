@@ -3,6 +3,8 @@ import Landing from './Landing';
 import Items from './Items';
 import Navigation from './Navigation';
 import UserSignIn from './UserSignIn';
+import UserSignOut from './UserSignOut';
+import UserSignUp from './UserSignUp';
 
 class MainPage extends Component {
     state = {
@@ -22,6 +24,12 @@ class MainPage extends Component {
         } else if(this.state.currentSection === '/signIn'){
             section = <UserSignIn />
             console.log('userSignIn')
+        } else if(this.state.currentSection === '/signOut'){
+            section = <UserSignOut />
+            console.log('userSignOut')
+        } else if(this.state.currentSection === '/signUp'){
+            section = <UserSignUp />
+            console.log('userSignUp')
         }
         return (
             <div>

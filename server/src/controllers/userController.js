@@ -2,8 +2,8 @@ const User = require('../db/models').User;
 
 module.exports = {
     signIn(req, res) {
-        const {username, email, password} = req.body;
-        User.login({username, password}), (err,data) => {
+        const {email, password} = req.body;
+        User.login({email, password}), (err,data) => {
             if(err) {
                 res.status(500).send();
             } else {

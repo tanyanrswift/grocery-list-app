@@ -16,7 +16,6 @@ class Items extends Component {
         )
     }
     createItem(e){
-        console.log('createItem function')
         e.preventDefault();
         fetch('http://localhost:8000/api/items/create', {
             method: 'POST',

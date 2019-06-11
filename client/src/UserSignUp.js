@@ -6,10 +6,6 @@ export default function UserSignUp(props){
             <h2>User Sign Up</h2>
             <form onSubmit={props.onSubmit}>
                 <div>
-                    <label>Username:</label>
-                    <input type="text" name="username" placeholder="Enter Username" />
-                </div>
-                <div>
                     <label>Email Address:</label>
                     <input type="email" name="email" placeholder="Enter Email Address" />
                 </div>
@@ -17,10 +13,10 @@ export default function UserSignUp(props){
                     <label>Password:</label>
                     <input type="password" name="password" placeholder="Enter Password" />
                 </div>
-                <div>
+                {/* <div>
                    <label>Reenter Password:</label>
                     <input type="password" name="password-confirmation" placeholder="Reenter Password" />
-                </div>
+                </div> */}
                 <button>Sign Up</button>
             </form>
         </section>
