@@ -1,32 +1,19 @@
+const User = require('../db/models').User;
+
 module.exports = {
-    // signUp(req, res, next){
-
-    // },
-    // signInForm(req, res, next){
-
-    // },
-    // signOut(req, res, next){
-
-    // },
-    create(req, res, next){
-        let newUser = {
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-            passwordConfirmation: req.body.passwordConfirmation
-        };
-        userQueries.createUser(newUser, (err, user) => {
-            if(err){
-                req.flash("error", err);
-                res.redirect("/api/users/signUp");
+    signIn(req, res) {
+        const {username, email, password} = req.body;
+        User.login({username, password}), (err,data) => {
+            if(err) {
+                res.status(500).send();
             } else {
-                req.flash("notice", "Successful Sign in!");
-                res.redirect("/");
-                console.log("User created");
+                res.json(data);
+                console.log('successful sign in backend')
             }
-        });
-    }//,
-    // signIn(req, res, next){
-
-    // }
+        }
+    },
+    signOut(req, res){
+        req.logOut();
+        console.log('successful sign out');
+    }
 }

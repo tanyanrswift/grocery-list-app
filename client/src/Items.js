@@ -16,13 +16,16 @@ class Items extends Component {
         )
     }
     createItem(e){
+        console.log('createItem function')
         e.preventDefault();
         fetch('http://localhost:8000/api/items/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({name: e.target.name.value, purchased: e.target.purchased.value})
+            body: JSON.stringify({name: e.target.name.value
+                //, purchased: e.target.purchased.value
+            })
         })
         .then(res => res.json())
         .then(newItem => this.setState({items: [...this.state.items,newItem]}));
@@ -36,7 +39,7 @@ class Items extends Component {
                     {this.state.items.map(item =>
                         <ul>
                             <li>{item.name}</li>
-                            <li>{item.purchased}</li>
+                            {/* <li>{item.purchased}</li> */}
                         </ul>
                     )}
                 </ul>
