@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ItemForm from './ItemForm';
 import ItemUpdate from './ItemUpdate';
+import './style/items.css';
 
 class Items extends Component {
     state = {
@@ -82,7 +83,7 @@ class Items extends Component {
         return(
             <section>
                 <ItemForm onSubmit={(e) => this.createItem(e)} />
-                <h2>Items</h2>
+                <h2 class='items-header'>Items</h2>
                 <ul>
                     {this.state.items.map(item => {
                         return <a href={item.id} onClick={(e) => this.showSingle(e, item.id)}>

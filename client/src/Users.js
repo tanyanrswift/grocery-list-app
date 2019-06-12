@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserSignUp from './UserSignUp';
+import './style/users.css';
 
 class Users extends Component {
     state = {

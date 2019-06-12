@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ItemForm(props){
     return <form onSubmit={props.onSubmit}>
-        <h2>Add A New Item</h2>
+        <h2 class='item-header'>Add A New Item</h2>
         {/* <label>
             <input type="checkbox" name='purchased' checked />
         </label> */}
