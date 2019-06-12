@@ -11,23 +11,34 @@ class Items extends Component {
     showAll(){
         fetch('http://localhost:8000/api/items')
         .then(res => res.json())
-        .then(data =>
+        .then(data =>{
+            console.log(data);
             this.setState({items: data})
-        )
+        })
     }
     createItem(e){
+        console.log('create item')
         e.preventDefault();
         fetch('http://localhost:8000/api/items/create', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify({name: e.target.name.value
                 //, purchased: e.target.purchased.value
-            })
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            credentials: 'include'
         })
-        .then(res => res.json())
-        .then(newItem => this.setState({items: [...this.state.items,newItem]}));
+        .then(res => {
+            console.log(res);
+            res.json()
+        })
+        .then(newItem => {
+            console.log(newItem);
+            this.setState({items: [...this.state.items,newItem]});
+        })
+        .catch(error => console.log('Error:', error));
     }
     render(){
         return(

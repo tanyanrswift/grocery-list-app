@@ -5,18 +5,27 @@ class Users extends Component {
     state = {
         users: []
     }
-    
     createUser(e){
+        console.log('create user')
         e.preventDefault();
         fetch('http://localhost:8000/api/users',{
             method: 'POST',
+            body: JSON.stringify({email: e.target.email.value, password: e.target.password.value}),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify({email: e.target.email.value, password: e.target.password.value})
+            credentials: 'include'
         })
-        .then(res => res.json())
-        .then(newUser => this.setState({users: [...this.state.users, newUser]}));
+        .then(res => {
+            console.log(res)
+            res.json()
+        })
+        .then(newUser => {
+            console.log(newUser);
+            this.setState({users: [...this.state.users, newUser]});
+        })
+        .catch(error => console.log('Error', error));
     }
     render(){
         return(

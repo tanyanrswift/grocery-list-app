@@ -66,3 +66,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+trying to figure out why backend and front end aren't connecting =>
+    added console.log statements to figure out what is hitting where and find out where we are stopping
+    discovered that the front end and the backend aren't connecting, issue is the fetch call
+        looked up documentation
+        tried to change based on research
+        cannot resolve, but with help could figure it out
+
+User Sign Up isn't pulling data from the form to User Component
+
