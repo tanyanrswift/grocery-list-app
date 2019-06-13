@@ -9,7 +9,7 @@ class Users extends Component {
     createUser(e){
         console.log('create user')
         e.preventDefault();
-        fetch('http://localhost:8000/api/users',{
+        fetch('http://localhost:8000/api/users/signUp',{
             method: 'POST',
             body: JSON.stringify({email: e.target.email.value, password: e.target.password.value}),
             headers: {

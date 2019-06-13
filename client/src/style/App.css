@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image:linear-gradient(gray, black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,4 +15,5 @@
 
 .grocery-bag-icon {
   height: 100px;
+  padding: 10px;
 }

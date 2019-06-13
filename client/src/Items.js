@@ -37,7 +37,7 @@ class Items extends Component {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            credentials: 'include'
+            mode: 'cors'
         })
         .then(res => {
             console.log(res);

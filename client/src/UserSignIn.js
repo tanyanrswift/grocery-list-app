@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './style/user-sign-in.css';
 
 class UserSignIn extends Component {
     checkSignIn(e){
@@ -14,11 +15,15 @@ class UserSignIn extends Component {
     render(){
         return (
             <div>
-                <h2>Sign In</h2>
-                <form onSubmit={this.checkSignIn}>
-                    <input type='email' name='email' placeholder='Enter email address' />
-                    <br />
-                    <input type='password' name='password' placeholder='Enter password' />
+                <h2 class='sign-in-header'>Sign In</h2>
+                <img src={require('./shopping-cart.png')} class='shopping-cart-icon' alt="shopping cart icon" />
+                <form class='sign-in-form' onSubmit={this.checkSignIn}>
+                    <div>
+                        <input type='email' name='email' placeholder='Enter email address' />
+                    </div>
+                    <div>
+                        <input type='password' name='password' placeholder='Enter password' />
+                    </div>
                     <input type='submit' name='Submit' />
                 </form>
             </div>
